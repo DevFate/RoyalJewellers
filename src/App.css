@@ -1,7 +1,7 @@
 /* src/App.css */
 .App {
   font-family: Arial, sans-serif;
-  background-image: url('src/Assets/homeBG.jpg');
+  background-image: url('Assets/homeBG.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
