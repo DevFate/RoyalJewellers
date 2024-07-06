@@ -1,19 +1,27 @@
 {
   "files": {
     "main.css": "/RoyalJewellers/static/css/main.604bd78c.css",
-    "main.js": "/RoyalJewellers/static/js/main.cea09eb3.js",
+    "main.js": "/RoyalJewellers/static/js/main.2b64282e.js",
     "static/js/453.7bfd398c.chunk.js": "/RoyalJewellers/static/js/453.7bfd398c.chunk.js",
+    "static/media/diamond_heart_neck.jpg": "/RoyalJewellers/static/media/diamond_heart_neck.20aae584fab8adfb27eb.jpg",
     "static/media/making_style.jpg": "/RoyalJewellers/static/media/making_style.21408ef9c4759db03d3e.jpg",
+    "static/media/emerald_necklace.jpg": "/RoyalJewellers/static/media/emerald_necklace.6ffee34f5e569c45153a.jpg",
     "static/media/homeBG.jpg": "/RoyalJewellers/static/media/homeBG.cb47825feeff6d5a3539.jpg",
+    "static/media/saphire_ring.jpg": "/RoyalJewellers/static/media/saphire_ring.36775e66e501c18c8942.jpg",
+    "static/media/diamond_braclet.jpg": "/RoyalJewellers/static/media/diamond_braclet.16e2e8a563fdaa9f0d01.jpg",
+    "static/media/ruby_ring.jpg": "/RoyalJewellers/static/media/ruby_ring.1cdf600a063b7389da45.jpg",
+    "static/media/pearl_earings.jpg": "/RoyalJewellers/static/media/pearl_earings.0bb2cc4b17bb523beb02.jpg",
+    "static/media/royal_gold_earings.jpg": "/RoyalJewellers/static/media/royal_gold_earings.9471cf0f82feb11f0c87.jpg",
+    "static/media/pearl_braclet.jpg": "/RoyalJewellers/static/media/pearl_braclet.3f7eb73584a76782ca1e.jpg",
     "static/media/ring_size_chart.jpg": "/RoyalJewellers/static/media/ring_size_chart.a4c8db11e3d91dd9cf94.jpg",
     "static/media/shopping-cart.svg": "/RoyalJewellers/static/media/shopping-cart.de9fc04ad44b3b919d59b4a18550e470.svg",
     "index.html": "/RoyalJewellers/index.html",
     "main.604bd78c.css.map": "/RoyalJewellers/static/css/main.604bd78c.css.map",
-    "main.cea09eb3.js.map": "/RoyalJewellers/static/js/main.cea09eb3.js.map",
+    "main.2b64282e.js.map": "/RoyalJewellers/static/js/main.2b64282e.js.map",
     "453.7bfd398c.chunk.js.map": "/RoyalJewellers/static/js/453.7bfd398c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.604bd78c.css",
-    "static/js/main.cea09eb3.js"
+    "static/js/main.2b64282e.js"
   ]
 }
