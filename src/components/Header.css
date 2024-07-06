@@ -1,0 +1,75 @@
+/* src/components/Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(204, 204, 204, 0.8); /* Using rgba with 0.8 alpha for transparency */
+  margin-bottom: 0; /* Ensure no margin at the bottom */
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 5px 10px; /* Adding padding for better hover effect */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  position: relative; /* Ensure relative positioning for dropdown */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul li:hover {
+  background-color: #666; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%; /* Position below the parent li */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: max-content;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f1f1f1; /* Ensure background changes but not text color */
+  color: inherit; /* Maintain the text color */
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s, filter 0.3s; /* Add smooth transition for hover effects */
+}
+
+.cart-icon:hover {
+  transform: scale(1.1); /* Slightly increase the size on hover */
+  filter: brightness(1.2); /* Brighten the icon on hover */
+}

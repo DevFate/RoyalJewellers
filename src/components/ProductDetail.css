@@ -1,0 +1,49 @@
+/* src/components/ProductDetail.css */
+.product-detail {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .product-detail-image {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .product-detail-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-detail-info {
+    flex: 2;
+  }
+  
+  .product-detail-info h1 {
+    margin-bottom: 20px;
+  }
+  
+  .product-detail-info p {
+    margin-bottom: 10px;
+  }
+  
+  .product-detail-info button {
+    padding: 10px 20px;
+    background-color: #666;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .product-detail-info button:hover {
+    background-color: #444;
+    transform: scale(1.05);
+  }
+  
+  .confirmation {
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+  }
+  

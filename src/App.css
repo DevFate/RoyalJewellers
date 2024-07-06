@@ -1,0 +1,10 @@
+/* src/App.css */
+.App {
+  font-family: Arial, sans-serif;
+  background-image: url('/public/Assets/homeBG.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}

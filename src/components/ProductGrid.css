@@ -1,0 +1,43 @@
+/* src/components/ProductGrid.css */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card {
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: 150px; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  margin-bottom: 10px;
+  background-color: #ccc;
+}
+
+.product-price {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-description {
+  color: #666;
+}
