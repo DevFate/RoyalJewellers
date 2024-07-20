@@ -2,10 +2,10 @@
 .guide-container {
     padding: 40px;
     background-color: #f8f8f8;
-    margin: 20px auto;
-    max-width: 800px;
+    margin: 20px;
+    max-width: 400px auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .guide-container h1 {

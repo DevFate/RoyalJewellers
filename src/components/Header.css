@@ -27,34 +27,59 @@ nav ul li a {
   text-decoration: none;
   color: inherit;
 }
+.header nav ul li button {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
 
 nav ul li:hover {
   background-color: #666; /* Change background color on hover */
   color: white; /* Change text color on hover */
 }
 
-.dropdown-menu {
-  display: flex;
-  flex-direction: column;
+.profile-menu .dropdown {
+  display: none; /* Hide the dropdown menu by default */
   position: absolute;
-  top: 100%; /* Position below the parent li */
+  top: 100%; /* Position it below the profile button */
   left: 0;
   background-color: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  width: max-content;
 }
 
-.dropdown-menu li {
+.profile-menu .dropdown li {
   padding: 10px;
-  white-space: nowrap;
   cursor: pointer;
 }
 
-.dropdown-menu li:hover {
-  background-color: #f1f1f1; /* Ensure background changes but not text color */
-  color: inherit; /* Maintain the text color */
+.profile-menu .dropdown li a,
+.profile-menu .dropdown li button {
+  color: #333;
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.profile-menu .dropdown li a:hover,
+.profile-menu .dropdown li button:hover {
+  background-color: #ddd;
+}
+
+.profile-menu:hover .dropdown {
+  display: block; /* Show the dropdown menu on hover */
 }
 
 .cart {

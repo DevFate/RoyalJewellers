@@ -1,10 +1,50 @@
-// src/components/Cart.js
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CartContext } from '../contexts/CartContext';
+import { OrderHistoryContext } from '../contexts/OrderHistoryContext';
 import './Cart.css';
 
 const Cart = () => {
-  const { cartItems, increaseQuantity, decreaseQuantity, subtotal } = useContext(CartContext);
+  const { cartItems, increaseQuantity, decreaseQuantity, subtotal, clearCart } = useContext(CartContext);
+  const { addOrder } = useContext(OrderHistoryContext);
+
+  const [paymentMethod, setPaymentMethod] = useState('creditCard');
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    cardNumber: '',
+    cardExpiry: '',
+    cvv: '',
+    address: '',
+    unit: '',
+    postalCode: '',
+    comments: ''
+  });
+  const [isCheckout, setIsCheckout] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handlePaymentMethodChange = (e) => {
+    setPaymentMethod(e.target.value);
+  };
+
+  const handleCheckout = (e) => {
+    e.preventDefault();
+    const order = {
+      id: Date.now(),
+      date: new Date().toLocaleDateString(),
+      items: cartItems,
+      total: (subtotal + subtotal * 0.13 + subtotal * 0.02 + 6).toFixed(2),
+      status: 'Processing',
+      returnable: false,
+      tracking: 'Order is being processed'
+    };
+    addOrder(order);
+    clearCart();
+    setIsCheckout(true);
+  };
 
   const tax = subtotal * 0.13;
   const otherFee = subtotal * 0.02;
@@ -36,46 +76,64 @@ const Cart = () => {
       </div>
       <div className="order-form">
         <h2>Order Summary</h2>
-        <form>
+        <form onSubmit={handleCheckout}>
           <label>Full Name:</label>
-          <input type="text" name="fullName" required />
+          <input type="text" name="fullName" value={formData.fullName} onChange={handleInputChange} required />
 
           <label>Email:</label>
-          <input type="email" name="email" required />
+          <input type="email" name="email" value={formData.email} onChange={handleInputChange} required />
 
-          <label>Card Number:</label>
-          <input type="text" name="cardNumber" required />
+          <label>Payment Method:</label>
+          <select value={paymentMethod} onChange={handlePaymentMethodChange} required>
+            <option value="creditCard">Credit Card</option>
+            <option value="paypal">PayPal</option>
+          </select>
 
-          <label>Card Expiry:</label>
-          <input type="text" name="cardExpiry" required />
+          {paymentMethod === 'creditCard' && (
+            <>
+              <label>Card Number:</label>
+              <input type="text" name="cardNumber" value={formData.cardNumber} onChange={handleInputChange} required />
 
-          <label>CVV:</label>
-          <input type="text" name="cvv" required />
+              <label>Card Expiry:</label>
+              <input type="text" name="cardExpiry" value={formData.cardExpiry} onChange={handleInputChange} required />
+
+              <label>CVV:</label>
+              <input type="text" name="cvv" value={formData.cvv} onChange={handleInputChange} required />
+            </>
+          )}
 
           <label>Address:</label>
-          <input type="text" name="address" required />
+          <input type="text" name="address" value={formData.address} onChange={handleInputChange} required />
 
           <label>Unit #:</label>
-          <input type="text" name="unit" />
+          <input type="text" name="unit" value={formData.unit} onChange={handleInputChange} />
 
           <label>Postal Code:</label>
-          <input type="text" name="postalCode" required />
+          <input type="text" name="postalCode" value={formData.postalCode} onChange={handleInputChange} required />
 
           <label>Additional Comments:</label>
-          <textarea name="comments"></textarea>
+          <textarea name="comments" value={formData.comments} onChange={handleInputChange}></textarea>
 
           <div className="order-summary">
             <p>Subtotal: ${subtotal.toFixed(2)}</p>
             <p>Tax (13%): ${tax.toFixed(2)}</p>
             <p>Delivery Charge: ${deliveryCharge.toFixed(2)}</p>
             <p>Other Fee: ${otherFee.toFixed(2)}</p>
-            
             <h3>Total: ${total.toFixed(2)}</h3>
           </div>
 
           <button type="submit">Checkout</button>
         </form>
       </div>
+      {isCheckout && (
+        <div className="confirmation-overlay">
+          <div className="confirmation-box">
+            <h2>Thank you for your order!</h2>
+            <p>Your order has been placed successfully.</p>
+            <button onClick={() => setIsCheckout(false)}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
