@@ -45,9 +45,18 @@ const products = [
 const ProductDetail = () => {
   const { id } = useParams();
   const product = products.find(p => p.id === parseInt(id));
+  const [confirmation, setConfirmation] = useState("");
   const { addToCart } = useContext(CartContext);
   const [review, setReview] = useState({ reviewer: '', rating: '', comment: '' });
   const [reviews, setReviews] = useState(product.reviews);
+  
+  const handleAddToCart = () => {
+    addToCart(product);
+    setConfirmation("Item added to cart!");
+    setTimeout(() => {
+      setConfirmation("");
+    }, 3000); // Remove confirmation message after 3 seconds
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -79,7 +88,10 @@ const ProductDetail = () => {
             </select>
           </div>
         )}
-        <button onClick={() => addToCart(product)}>Add to Cart</button>
+        
+        <button onClick={handleAddToCart}>Add to Cart</button>
+        {confirmation && <div className="confirmation">{confirmation}</div>}
+
         <div className="reviews">
           <h2>Reviews</h2>
           {reviews.length === 0 ? (
