@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/RoyalJewellers/static/css/main.b85cd88a.css",
-    "main.js": "/RoyalJewellers/static/js/main.38bbfbc1.js",
+    "main.css": "/RoyalJewellers/static/css/main.7ec8ba89.css",
+    "main.js": "/RoyalJewellers/static/js/main.175a66e1.js",
     "static/js/453.7bfd398c.chunk.js": "/RoyalJewellers/static/js/453.7bfd398c.chunk.js",
     "static/media/diamond_heart_neck.jpg": "/RoyalJewellers/static/media/diamond_heart_neck.20aae584fab8adfb27eb.jpg",
     "static/media/making_style.jpg": "/RoyalJewellers/static/media/making_style.21408ef9c4759db03d3e.jpg",
@@ -16,12 +16,12 @@
     "static/media/ring_size_chart.jpg": "/RoyalJewellers/static/media/ring_size_chart.a4c8db11e3d91dd9cf94.jpg",
     "static/media/shopping-cart.svg": "/RoyalJewellers/static/media/shopping-cart.de9fc04ad44b3b919d59b4a18550e470.svg",
     "index.html": "/RoyalJewellers/index.html",
-    "main.b85cd88a.css.map": "/RoyalJewellers/static/css/main.b85cd88a.css.map",
-    "main.38bbfbc1.js.map": "/RoyalJewellers/static/js/main.38bbfbc1.js.map",
+    "main.7ec8ba89.css.map": "/RoyalJewellers/static/css/main.7ec8ba89.css.map",
+    "main.175a66e1.js.map": "/RoyalJewellers/static/js/main.175a66e1.js.map",
     "453.7bfd398c.chunk.js.map": "/RoyalJewellers/static/js/453.7bfd398c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b85cd88a.css",
-    "static/js/main.38bbfbc1.js"
+    "static/css/main.7ec8ba89.css",
+    "static/js/main.175a66e1.js"
   ]
 }
